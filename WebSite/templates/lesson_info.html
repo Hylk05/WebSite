@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+
+{% block content %}
+<div class="main_wrapper">
+<div class="main_div">
+    {% if id == 999 %}
+    <div class="info_element" style="text-align: center;">Результаты своего урока</div>
+    {% else %}
+    <div class="info_element" style="text-align: center;">Результаты урока №{{ id }}</div>
+    {% endif %}
+    <div class="info_element" style="overflow: hidden; width: 100%;">===============================================================================================</div>
+    <div class="info_element">Время прохождения: {{ time }}</div>
+    <div class="info_element">Средняя скорость (знаки в минуту): {{ average_speed }}</div>
+</div>
+</div>
+{% endblock %}

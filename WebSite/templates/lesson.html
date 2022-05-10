@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main_wrapper">
+<div class="main_div">
+    <div class="info">
+        <span class="timer info_element">0:00</span>
+        <span class="errors_info info_element">Ошибок: <span class="errors_counter">0</span></span>
+        <span class="speed_info info_element">Скорость: <span class="speed_counter">0</span> знаков в минуту</span>
+    </div>
+    <div class="cursor" style="top: -10px; right: -10px;"></div>
+    <div class="typing_text">
+        {% for word in words_list %}
+        <div class="word">
+            {% for letter in word %}<div class="letter">{{letter}}</div>{% endfor %}
+        </div>
+        {% endfor %}
+        <!-- цикл записан в 8 строке записан одной строкой, чтобы не было отступа между буквами -->
+    </div>
+</div>
+</div>
+<script src="{{ url_for('static', filename='js/typing.js') }}"></script>
+{% endblock %}

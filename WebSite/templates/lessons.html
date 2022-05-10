@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main_wrapper text_center">
+{% for lesson in lessons %}
+<a class="lesson_card" href="/lesson/{{ lesson.id }}">
+    <div class="card_wrapper">
+        <div class="card_header"> Урок № </div>
+        <div class="card_body"> <span class="card_text">{{ lesson.id }}</span></div>
+        <div class="card_footer"> ПОЕХАЛИ </div>
+    </div>
+</a>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,119 @@
+.form{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    max-width: 450px;
+    text-align: center;
+
+    border: solid 1px black;
+    border-radius: 15px;
+    background-color: #212529;
+    color: white;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+body{
+    background-color: #4169E1;
+}
+
+.main_wrapper{
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.text_center{
+    text-align: center;
+}
+
+.main_div{
+    background-color: #343a40;
+    color: white;
+    border: black solid 1px;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 1%;
+}
+
+.info{
+    margin-bottom: 1%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 3%;
+    color: #FFC107;
+}
+
+.info_element{
+    margin-right: 3%;
+}
+
+.img{
+    width: 100%;
+}
+
+.word{
+    display: inline-block;
+}
+
+.letter{
+    display: inline;
+}
+
+.typed_letter{
+    display: inline-block;
+    opacity: 0.5;
+}
+
+.cursor{
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    top: 100px;
+    left: 100px;
+    background-color: #FFC107;
+    border-radius: 3px;
+}
+
+.lesson_card{
+    display: inline-block;
+    background-color: #212529;
+    border-radius: 8px;
+    width: 200px;
+    height: 250px;
+    margin-bottom: 1%;
+}
+
+.card_wrapper{
+    text-align: center;
+    height: 100%;
+    color: #F8F9FA;
+}
+
+.card_header{
+    height: 15%;
+    background-color: #151A1D;
+}
+
+.card_body{
+    height: 60%;
+    font-size: 60px;
+    margin: 5% 0;
+}
+
+.card_text{
+    display: inline-block;
+    width: 75%;
+    height: 100%;
+
+    border: 4px solid #F8F9FA;
+    border-radius: 50%;
+
+    padding-top: 10%;
+}
+
+.card_footer{
+    height: 17%;
+    padding-top: 5%;
+    background-color: #151A1D;
+    border-radius: 8px;
+}

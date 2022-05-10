@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="main_wrapper">
+    <form action="" method="post" class="form" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.file.label }}<br>
+            {{ form.file(class="form-control", type="file") }}
+            {% for error in form.file.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.submit_btn(class="form-control", type="submit") }}
+            {% for error in form.submit_btn.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{message}}
+        </p>
+    </form>>
+</div>
+{% endblock %}

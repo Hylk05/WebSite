@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+
+{% block content %}
+<div class="main_wrapper">
+<div class="main_div">
+    <div class="info_element" >Имя: {{ user.name }}</div>
+    <div class="info_element" >Почта: {{ user.email }}</div>
+    <div class="info_element">Дата создания аккаунта: {{ user.created_date }}</div>
+    <div class="info_element">Уроков пройдено (и перепройдено): {{ user.lessons_done }}</div>
+</div>
+</div>
+{% endblock %}

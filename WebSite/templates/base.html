@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css', v=1)}}">
+    <title>{{title}}</title>
+</head>
+<body>
+    <header class="d-flex bg-dark text-white flex-wrap flex-md-row align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-2 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="35" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+      </a>
+
+      {% if current_user.is_authenticated %}
+      <ul class="nav col-1 col-lg-auto me-lg-auto mb-6 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 text-white">Главная</a></li>
+        <li><a href="/profile" class="nav-link px-2 text-white">Профиль</a></li>
+        <li><a href="/lessons" class="nav-link px-2 text-white">Уроки</a></li>
+        <li><a href="/info" class="nav-link px-2 text-white">Информация</a></li>
+        <li><a href="/my_text" class="nav-link px-2 text-white">Свой текст</a></li>
+        <li><a href="/lesson/random_text" class="nav-link px-2 text-white">Случайный текст (API)</a></li>
+      </ul>
+
+      <div class="col-md-2 text-end">
+          <button type="button" class="btn btn-outline-light me-2" onclick="document.location = '/logout'">Выйти</button>
+      </div>
+
+      {% else %}
+      <div class="col-md-3 text-end">
+          <button type="button" class="btn btn-outline-light me-2" onclick="document.location = '/login'">Войти</button>
+          <button type="button" class="btn btn-warning text-black" onclick="document.location = '/register'">Зарегистрироваться</button>
+      </div>
+      {% endif %}
+    </header>
+
+<!-- Ниже место для вставки частей сайта из других html-файлов -->
+{% block content %} {% endblock %}
+</body>
+</html>
